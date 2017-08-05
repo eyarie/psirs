@@ -1,14 +1,30 @@
 var db = global.db;
 
 var Schema = db.Schema;
-var studentSchema = new Schema(
+var individualSchema = new Schema(
     {
-        firstname: String,
-        lastname: {type: String, default: "Eyarie"},
-        middle: {type: String, default: ""},
-        createdAt: {type: Date, default: Date.now}
+        title: String,
+        gender: String,
+        nationality:String,
+        date_of_birth: Date,
+        state_of_origin: {type: String, default: ""},
+        address: String,
+        lga_address: {type: String, default: ""},
+        phone: String,
+        email: String,
+        occupation: String,
+        market_associated: String,
+        park_associated: String,
+        company_category: {type: String, default: ""},
+        office_address: String,
+        office_lga: String,
+        drivers_license: String,
+        national_id: String,
+        passport_number: String,
+        disability: {type: String, default: ""},
+        user_id: String
     }
 );
 
 // Here the studentSchema is exported as studentModel
-module.exports.studentModel = db.model('studs', studentSchema);
+module.exports.individualModel = db.model('individual', individualSchema);
