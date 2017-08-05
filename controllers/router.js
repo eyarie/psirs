@@ -1,5 +1,5 @@
 var individual = require('./individual.js'),
-var individual = require('./corporate.js')
+     corporate = require('./corporate.js');
 
 function route(app){
 
