@@ -1,0 +1,30 @@
+{
+  "name": "psirs",
+  "version": "1.0.0",
+  "description": "This is the enumeraion microservice for the plateau state internal revenue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyarie/psirs.git"
+  },
+  "author": "@Dahab & @Anthony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyarie/psirs/issues"
+  },
+  "homepage": "https://github.com/eyarie/psirs#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "compression": "^1.7.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.3",
+    "logger": "0.0.1",
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.5",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.3"
+  }
+}
