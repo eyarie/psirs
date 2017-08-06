@@ -1,30 +1,82 @@
 var db = global.db;
-
 var Schema = db.Schema;
-var individualSchema = new Schema(
-    {
-        title: String,
-        gender: String,
-        nationality:String,
-        date_of_birth: Date,
-        state_of_origin: {type: String, default: ""},
-        address: String,
-        lga_address: {type: String, default: ""},
-        phone: String,
-        email: String,
-        occupation: String,
-        market_associated: String,
-        park_associated: String,
-        company_category: {type: String, default: ""},
-        office_address: String,
-        office_lga: String,
-        drivers_license: String,
-        national_id: String,
-        passport_number: String,
-        disability: {type: String, default: ""},
-        user_id: String
-    }
-);
 
-// Here the studentSchema is exported as studentModel
+
+var individualSchema = new Schema({
+
+        title: {
+      		type: String
+      		// required: true
+      	},
+        firstname: {
+      		type: String
+      		// required: true
+      	},
+        lastname: {
+      		type: String
+      		// required: true
+      	},
+        gender: {
+      		type: String,
+      		required: true
+      	},
+        nationality: {
+      		type: String,
+      		required: true
+      	},
+        date_of_birth: {
+      		type: Date
+      	},
+        state_of_origin: {
+      		type: String
+      	},
+        address:{
+      		type: String
+      	},
+        lga_address: {
+      		type: String
+      	},
+        phone: {
+      		type: String,
+      		required: true
+      	},
+        email: {
+      		type: String
+      	},
+        occupation: {
+      		type: String
+      	},
+        market_associated: {
+      		type: String
+      	},
+        park_associated: {
+      		type: String
+      	},
+        company_category: {
+      		type: String
+      	},
+        office_address: {
+      		type: String
+      	},
+        office_lga: {
+      		type: String
+      	},
+        drivers_license: {
+      		type: String
+      	},
+        national_id: {
+      		type: String
+      	},
+        passport_number: {
+      		type: String
+      	},
+        disability: {
+      		type: String
+      	},
+        user_id: {
+      		type: String,
+      		required: true
+      	}
+    });
+
 module.exports.individualModel = db.model('individual', individualSchema);

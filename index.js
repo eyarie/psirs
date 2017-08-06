@@ -17,7 +17,7 @@ app.enable('trust proxy');
 app.use(logger('dev'));
 app.use(compress());
 app.use(methodOverride('X-HTTP-Method-Override'));
-app.use(bodyParser('json'));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
